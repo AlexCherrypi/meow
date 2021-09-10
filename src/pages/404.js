@@ -55,8 +55,15 @@ const NotFoundPage = () => {
   `)
   return (
     <main style={pageStyles}>
-      <style>
-      body { "backgroundColor: black"}
+      <style type="text/css">
+        {`
+        html {
+          background-color: #000000;
+          color: #FFFFFF;
+          font: 1.3rem Inconsolata, monospace;
+          text-shadow: 0 0 5px #FFFFFFcb;
+        }
+      `}
       </style>
       <title>Not found</title>
       <div style={container}>
