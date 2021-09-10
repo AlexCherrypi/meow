@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1cfaa138-ae8d-4bac-9542-1dd5b3de078e/deploy-status)](https://app.netlify.com/sites/angry-galileo-5d9d2f/deploys)
-
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
