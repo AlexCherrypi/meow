@@ -55,6 +55,9 @@ const NotFoundPage = () => {
   `)
   return (
     <main style={pageStyles}>
+      <style>
+      body { "backgroundColor: black"}
+      </style>
       <title>Not found</title>
       <div style={container}>
       <header style={siteTitle}>{data.site.siteMetadata.title}
