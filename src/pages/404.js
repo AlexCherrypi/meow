@@ -63,6 +63,17 @@ const NotFoundPage = () => {
           font: 1.3rem Inconsolata, monospace;
           text-shadow: 0 0 5px #FFFFFFcb;
         }
+
+        a{
+          color: #00AA00;
+          text-shadow: 0 0 5px #00AA00cb
+        }
+
+        h1{
+          color: #663399;
+          text-shadow: 0 0 5px #663399cb;
+        }
+        
       `}
       </style>
       <title>Not found</title>
