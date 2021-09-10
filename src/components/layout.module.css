@@ -12,11 +12,14 @@ body {
   text-shadow: 0 0 5px #FFFFFFcb;
 }
 
-a{
+a {
   color: #00AA00;
   text-shadow: 0 0 5px #00AA00cb
 }
 
+hr {
+  margin: 2rem 0;
+}
 
 .container {
     margin: auto;

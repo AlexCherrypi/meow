@@ -3,11 +3,10 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import {
   container,
-  navLinks,
-  navLinkItem,
   siteTitle,
   siteIcon,
 } from './layout.module.css'
+import Navigation from './nav.js'
 
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(graphql`
@@ -32,24 +31,13 @@ const Layout = ({ pageTitle, children }) => {
       />
       </Link>
       </header>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" >
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" >
-              About
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      {Navigation ()}
       <main>
         <h1 >{pageTitle}</h1>
         {children}
       </main>
+      <hr></hr>
+      {Navigation ()}
     </div>
   )
 }
