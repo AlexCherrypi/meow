@@ -34,6 +34,11 @@ a{
     margin: 1.5rem 0;
     text-shadow: 0 0 5px #6d6a75cb
   }
+  .site-icon {
+    float: right;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
   .nav-links {
     display: flex;
     list-style: none;

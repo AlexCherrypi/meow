@@ -1,21 +1,25 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from 'gatsby-plugin-image'
 
 // styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
 
 const paragraphStyles = {
   marginBottom: 48,
 }
+
+const container = {
+  margin: "auto",
+  "max-width": "750px",
+}
+
+const pageStyles = {
+  backgroundColor: "#000000",
+  color: "#FFFFFF",
+  font: "1.3rem Inconsolata, monospace",
+  textShadow: "0 0 5px #FFFFFFcb",
+}
+
 const codeStyles = {
   color: "#8A6534",
   padding: 4,
@@ -24,18 +28,47 @@ const codeStyles = {
   borderRadius: 4,
 }
 
-// markup
+const siteTitle = {
+  fontSize: "3rem",
+  color: "#6D6A75",
+  fontWeight: "700",
+  margin: "1.5rem 0 1.5rem ",
+  textShadow: "0 0 5px #6d6a75cb",
+}
+
+const siteIcon = {
+  float: "right",
+  width: "3.5rem",
+  height: "3.5rem",
+}
+
+
 const NotFoundPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <main style={pageStyles}>
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
+      <div style={container}>
+      <header style={siteTitle}>{data.site.siteMetadata.title}
+      <Link to="/" >
+      <StaticImage
+        style={siteIcon}
+        alt="Professor Amanda"
+        src="../images/icon.png"
+      />
+      </Link>
+      </header>
+      <h1>Page not found</h1>
       <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
+        Sorry we couldn’t find what you were looking for :/
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -47,6 +80,7 @@ const NotFoundPage = () => {
         <br />
         <Link to="/">Go home</Link>.
       </p>
+      </div>
     </main>
   )
 }
