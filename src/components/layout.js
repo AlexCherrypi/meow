@@ -31,13 +31,13 @@ const Layout = ({ pageTitle, children }) => {
       />
       </Link>
       </header>
-      {Navigation ()}
+      <Navigation></Navigation>
       <main>
         <h1 >{pageTitle}</h1>
         {children}
       </main>
       <hr></hr>
-      {Navigation ()}
+      <Navigation></Navigation>
     </div>
   )
 }

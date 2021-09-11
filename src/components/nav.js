@@ -15,12 +15,16 @@ const navelement = (to, _name) => {
   )
 }
 
-const Navigation = () => {
+const Navigation = ({pageTitle}) => {
   let navelements = [["/","Home"]]
+  if (pageTitle === "Home Page") {
+    navelements = []
+  } 
+  
 
   /* sort: {order: DESC, fields: name} */
   const query = useStaticQuery(graphql`
-    query {
+    query navelements{
       allFile (
         filter: {ext: {eq: ".js"}, extension: {}, name: {regex: "/^(?!404|index)[a-zA-Z0-9]+/"}, sourceInstanceName: {eq: "pages"}}
         
