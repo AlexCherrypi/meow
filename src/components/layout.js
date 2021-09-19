@@ -38,6 +38,7 @@ const Layout = ({ pageTitle, children }) => {
       </main>
       <hr></hr>
       {Navigation ()}
+      <a style="color:black" rel="me" href="https://mastodon.social/@dumbcat">Mastodon</a>
     </div>
   )
 }
