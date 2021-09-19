@@ -5,6 +5,7 @@ import {
   container,
   siteTitle,
   siteIcon,
+  hidden,
 } from './layout.module.css'
 import Navigation from './nav.js'
 
@@ -38,7 +39,7 @@ const Layout = ({ pageTitle, children }) => {
       </main>
       <hr></hr>
       <Navigation></Navigation>
-      <a style="color:black" rel="me" href="https://mastodon.social/@dumbcat">Mastodon</a>
+      <a className={hidden} rel="me" href="https://mastodon.social/@dumbcat" >Mastodon</a>
     </div>
   )
 }

@@ -21,6 +21,12 @@ hr {
   margin: 2rem 0;
 }
 
+.hidden{
+  color: #000000;
+  text-shadow: 0 0 0 #000000;
+
+}
+
 .container {
     margin: auto;
     max-width: 750px;
